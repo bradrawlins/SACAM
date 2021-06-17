@@ -127,7 +127,7 @@ The final step of the solid fuel combustion process is realized when all the vol
 \frac{dm_c}{dt}=-A_{p}\frac{R_{c}R_{diff}}{R_{c}+R_{diff}}P_{O_{2}}
 \end{equation}
 \\
-The interested reader is directed to \cite{ansys} for an in-depth derivation of the above equation. According to Sankar et al \cite{sankar}, the gas phase reactions in boilers are fast with the chemical time scales being orders of magnitude faster than turbulent mixing time scales. This leads to a mixed-is burnt assumption being adequate for species and temperature distribution predictions. The gas-phase volatile and CO reactions are approximated using the two-step global reaction shown in equations 
+The interested reader is directed to \cite{ansys} for an in-depth derivation of the above equation. According to Sankar et al \cite{sankar}, the gas phase reactions in boilers are fast with the chemical time scales being orders of magnitude faster than turbulent mixing time scales. This leads to a mixed-is burnt assumption being adequate for species and temperature distribution predictions. The gas-phase volatile and CO reactions are approximated using the two-step global reaction shown in equation \ref{eqn_volatiles}. 
 
 \begin{equation}\label{eqn_volatiles}
 \begin{split}
@@ -224,7 +224,7 @@ SA inlet temperature & 577 &558 & 535 & $K$  \\
 \hline
 \end{tabular}
 \end{table}\\
-Other necessary wall boundary conditions such as wall temperatures and emissivities are listed in the work of Laubscher and Rousseau (REFERENCE).
+Other necessary wall boundary conditions such as wall temperatures and emissivities are listed in the work of Laubscher and Rousseau \cite{laubscher_1}.
 \subsubsection{Numerical solution strategy}
 The current simulations were performed using the ANSYS Fluent\textsuperscript{\textregistered} 19.2 pressure-based solver. Pressure-momentum coupling was set to the SIMPLE technique, with momentum, energy and species equations being discretized using the second-order upwind method. The pressure equation was discretized using PRESTO!. This setup holds for both the EE model and the detailed EL model. The difference arises in the use of scalar fields in the EE configuration and using the discrete phase modelling approach in the EL setup. Simulations were performed on a numerical mesh consisting of roughly 6.2 million cells. A mesh independence study was conducted for mesh sizes consisting of 4.2 and 10.2 millions with the 6.2 million cell model deemed acceptable for this study. To ensure an accurate numerical solution the mesh aspect ratio was kept below 15 and orthogonal quality above 0.2.\\
 \\
