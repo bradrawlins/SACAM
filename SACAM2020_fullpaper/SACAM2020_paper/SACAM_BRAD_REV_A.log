@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.16)  17 JUN 2021 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.16)  19 JUN 2021 11:58
 entering extended mode
 **./SACAM_BRAD_REV_A.tex
 (SACAM_BRAD_REV_A.tex
@@ -407,9 +407,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks27
 \@floatcapt=\box56
 )
-LaTeX Font Info:    Trying to load font information for T1+txr on input line 10
+(C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\indentf
+irst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+LaTeX Font Info:    Trying to load font information for T1+txr on input line 12
 .
- (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txr.fd
+
+(C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txr.fd
 File: t1txr.fd 2000/12/15 v3.1
 )
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend
@@ -420,41 +425,41 @@ File: l3backend-pdftex.def 2021-02-06 L3 backend support: PDF output (pdfTeX)
 ) (SACAM_BRAD_REV_A.aux)
 \openout1 = `SACAM_BRAD_REV_A.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 10.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-10.
+12.
 
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-10.
+12.
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-10.
+12.
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 1
-0.
+2.
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -514,91 +519,60 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for T1+txss on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for T1+txss on input line 2
+9.
 
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 33.
+(Font)              scaled to size 13.29996pt on input line 29.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <14> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 33.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 13.29996pt on input line 33.
+(Font)              scaled to size 13.29996pt on input line 29.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 33.
+(Font)              scaled to size 11.39996pt on input line 29.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <12> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 33.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 11.39996pt on input line 33.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 3
-3.
+(Font)              scaled to size 11.39996pt on input line 29.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
+9.
 
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
+9.
 
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
+9.
 
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
+9.
 
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
+9.
 
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 33.
+(Font)              scaled to size 8.54997pt on input line 29.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <9> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 33.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 8.54997pt on input line 33.
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--45
-
- []
-
-
-Underfull \hbox (badness 1082) in paragraph at lines 37--45
-\T1/txr/m/n/10 Three-dimensional com-pu-ta-tional fluid dy-nam-ics (CFD) can ca
-p-ture the ther-mal per-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--45
-
- []
-
-
-Underfull \hbox (badness 1360) in paragraph at lines 37--45
-\T1/txr/m/n/10 Another ap-proach is to use a Eu-le-rian multi-fluid model as us
-ed by the fol-low-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--45
-
- []
+(Font)              scaled to size 8.54997pt on input line 29.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -609,20 +583,15 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 {C:/Users/RWLBRA001/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 47.
+(Font)              scaled to size 9.49997pt on input line 43.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <10> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 47.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 9.49997pt on input line 47.
+(Font)              scaled to size 9.49997pt on input line 43.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 50.
+(Font)              scaled to size 9.49997pt on input line 46.
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
+Underfull \hbox (badness 10000) in paragraph at lines 57--60
 
  []
 
@@ -632,283 +601,164 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <9> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 92.
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--117
-
- []
-
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 98.
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 119--122
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
-39.
+46.
 (C:\Users\RWLBRA001\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
+<domain.png, id=24, 697.10437pt x 554.07pt>
+File: domain.png Graphic file (type png)
+<use domain.png>
+Package pdftex.def Info: domain.png  used on input line 184.
+(pdftex.def)             Requested size: 261.4135pt x 207.77574pt.
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [5]
-<domain.png, id=28, 697.10437pt x 554.07pt>
-File: domain.png Graphic file (type png)
-<use domain.png>
-Package pdftex.def Info: domain.png  used on input line 179.
-(pdftex.def)             Requested size: 261.4135pt x 207.77574pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--228
-
- []
-
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [6 <./domain.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
+<bar_100.png, id=32, 378.213pt x 285.2256pt>
+File: bar_100.png Graphic file (type png)
+<use bar_100.png>
+Package pdftex.def Info: bar_100.png  used on input line 245.
+(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
+<bar_80.png, id=33, 378.213pt x 285.2256pt>
+File: bar_80.png Graphic file (type png)
+<use bar_80.png>
+Package pdftex.def Info: bar_80.png  used on input line 247.
+(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
+<bar_60.png, id=34, 378.213pt x 285.2256pt>
+File: bar_60.png Graphic file (type png)
+<use bar_60.png>
+Package pdftex.def Info: bar_60.png  used on input line 249.
+(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
 
- []
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
-
- []
-
+<velo.jpg, id=35, 114.4275pt x 367.3725pt>
+File: velo.jpg Graphic file (type jpg)
+<use velo.jpg>
+Package pdftex.def Info: velo.jpg  used on input line 258.
+(pdftex.def)             Requested size: 34.3285pt x 110.21259pt.
+<100_velo.jpg, id=36, 788.9475pt x 1440.88312pt>
+File: 100_velo.jpg Graphic file (type jpg)
+<use 100_velo.jpg>
+Package pdftex.def Info: 100_velo.jpg  used on input line 259.
+(pdftex.def)             Requested size: 59.1685pt x 108.06157pt.
+<80_velo.jpg, id=37, 729.47531pt x 1418.29875pt>
+File: 80_velo.jpg Graphic file (type jpg)
+<use 80_velo.jpg>
+Package pdftex.def Info: 80_velo.jpg  used on input line 261.
+(pdftex.def)             Requested size: 54.70828pt x 106.36781pt.
+<60_velo.jpg, id=38, 774.64406pt x 1440.13031pt>
+File: 60_velo.jpg Graphic file (type jpg)
+<use 60_velo.jpg>
+Package pdftex.def Info: 60_velo.jpg  used on input line 263.
+(pdftex.def)             Requested size: 58.0958pt x 108.00511pt.
+File: velo.jpg Graphic file (type jpg)
+<use velo.jpg>
+Package pdftex.def Info: velo.jpg  used on input line 264.
+(pdftex.def)             Requested size: 34.3285pt x 110.21259pt.
+<100_velo_spm.jpg, id=39, 229.60782pt x 447.17062pt>
+File: 100_velo_spm.jpg Graphic file (type jpg)
+<use 100_velo_spm.jpg>
+Package pdftex.def Info: 100_velo_spm.jpg  used on input line 265.
+(pdftex.def)             Requested size: 50.51387pt x 98.37784pt.
+<80_velo_spm.jpg, id=40, 235.63031pt x 458.46281pt>
+File: 80_velo_spm.jpg Graphic file (type jpg)
+<use 80_velo_spm.jpg>
+Package pdftex.def Info: 80_velo_spm.jpg  used on input line 267.
+(pdftex.def)             Requested size: 51.83882pt x 100.86212pt.
+<60_velo_spm.jpg, id=41, 241.65282pt x 462.22687pt>
+File: 60_velo_spm.jpg Graphic file (type jpg)
+<use 60_velo_spm.jpg>
+Package pdftex.def Info: 60_velo_spm.jpg  used on input line 269.
+(pdftex.def)             Requested size: 53.16377pt x 101.69022pt.
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [7]
-<bar_100.png, id=36, 378.213pt x 285.2256pt>
-File: bar_100.png Graphic file (type png)
-<use bar_100.png>
-Package pdftex.def Info: bar_100.png  used on input line 240.
-(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
-<bar_80.png, id=37, 378.213pt x 285.2256pt>
-File: bar_80.png Graphic file (type png)
-<use bar_80.png>
-Package pdftex.def Info: bar_80.png  used on input line 242.
-(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
-<bar_60.png, id=38, 378.213pt x 285.2256pt>
-File: bar_60.png Graphic file (type png)
-<use bar_60.png>
-Package pdftex.def Info: bar_60.png  used on input line 244.
-(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
-<velo.jpg, id=39, 114.4275pt x 367.3725pt>
-File: velo.jpg Graphic file (type jpg)
-<use velo.jpg>
-Package pdftex.def Info: velo.jpg  used on input line 252.
-(pdftex.def)             Requested size: 34.3285pt x 110.21259pt.
-<100_velo.jpg, id=40, 788.9475pt x 1440.88312pt>
-File: 100_velo.jpg Graphic file (type jpg)
-<use 100_velo.jpg>
-Package pdftex.def Info: 100_velo.jpg  used on input line 253.
-(pdftex.def)             Requested size: 67.06566pt x 122.48444pt.
-<80_velo.jpg, id=41, 729.47531pt x 1418.29875pt>
-File: 80_velo.jpg Graphic file (type jpg)
-<use 80_velo.jpg>
-Package pdftex.def Info: 80_velo.jpg  used on input line 255.
-(pdftex.def)             Requested size: 62.01015pt x 120.56462pt.
-<60_velo.jpg, id=42, 774.64406pt x 1440.13031pt>
-File: 60_velo.jpg Graphic file (type jpg)
-<use 60_velo.jpg>
-Package pdftex.def Info: 60_velo.jpg  used on input line 257.
-(pdftex.def)             Requested size: 65.84978pt x 122.42044pt.
-File: velo.jpg Graphic file (type jpg)
-<use velo.jpg>
-Package pdftex.def Info: velo.jpg  used on input line 258.
-(pdftex.def)             Requested size: 34.3285pt x 110.21259pt.
-<100_velo_spm.jpg, id=43, 229.60782pt x 447.17062pt>
-File: 100_velo_spm.jpg Graphic file (type jpg)
-<use 100_velo_spm.jpg>
-Package pdftex.def Info: 100_velo_spm.jpg  used on input line 259.
-(pdftex.def)             Requested size: 61.99493pt x 120.73767pt.
-<80_velo_spm.jpg, id=44, 235.63031pt x 458.46281pt>
-File: 80_velo_spm.jpg Graphic file (type jpg)
-<use 80_velo_spm.jpg>
-Package pdftex.def Info: 80_velo_spm.jpg  used on input line 261.
-(pdftex.def)             Requested size: 63.62103pt x 123.7866pt.
-<60_velo_spm.jpg, id=45, 241.65282pt x 462.22687pt>
-File: 60_velo_spm.jpg Graphic file (type jpg)
-<use 60_velo_spm.jpg>
-Package pdftex.def Info: 60_velo_spm.jpg  used on input line 263.
-(pdftex.def)             Requested size: 65.24713pt x 124.80292pt.
 <temp.jpg, id=46, 114.4275pt x 367.3725pt>
-File: temp.jpg Graphic file (type jpg)
-<use temp.jpg>
-Package pdftex.def Info: temp.jpg  used on input line 272.
-(pdftex.def)             Requested size: 34.3285pt x 110.21259pt.
-<100_temp.jpg, id=47, 788.9475pt x 1436.36626pt>
-File: 100_temp.jpg Graphic file (type jpg)
-<use 100_temp.jpg>
-Package pdftex.def Info: 100_temp.jpg  used on input line 273.
-(pdftex.def)             Requested size: 64.6941pt x 117.78279pt.
-<80_temp.jpg, id=48, 729.47531pt x 1416.79312pt>
-File: 80_temp.jpg Graphic file (type jpg)
-<use 80_temp.jpg>
-Package pdftex.def Info: 80_temp.jpg  used on input line 275.
-(pdftex.def)             Requested size: 59.81735pt x 116.17778pt.
-<60_temp.jpg, id=49, 747.54282pt x 1424.32124pt>
-File: 60_temp.jpg Graphic file (type jpg)
-<use 60_temp.jpg>
-Package pdftex.def Info: 60_temp.jpg  used on input line 277.
-(pdftex.def)             Requested size: 61.2989pt x 116.79509pt.
 File: temp.jpg Graphic file (type jpg)
 <use temp.jpg>
 Package pdftex.def Info: temp.jpg  used on input line 278.
 (pdftex.def)             Requested size: 34.3285pt x 110.21259pt.
+<100_temp.jpg, id=47, 788.9475pt x 1436.36626pt>
+File: 100_temp.jpg Graphic file (type jpg)
+<use 100_temp.jpg>
+Package pdftex.def Info: 100_temp.jpg  used on input line 279.
+(pdftex.def)             Requested size: 59.1685pt x 107.72281pt.
+<80_temp.jpg, id=48, 729.47531pt x 1416.79312pt>
+File: 80_temp.jpg Graphic file (type jpg)
+<use 80_temp.jpg>
+Package pdftex.def Info: 80_temp.jpg  used on input line 281.
+(pdftex.def)             Requested size: 54.70828pt x 106.2549pt.
+<60_temp.jpg, id=49, 747.54282pt x 1424.32124pt>
+File: 60_temp.jpg Graphic file (type jpg)
+<use 60_temp.jpg>
+Package pdftex.def Info: 60_temp.jpg  used on input line 283.
+(pdftex.def)             Requested size: 56.0633pt x 106.81947pt.
+File: temp.jpg Graphic file (type jpg)
+<use temp.jpg>
+Package pdftex.def Info: temp.jpg  used on input line 284.
+(pdftex.def)             Requested size: 34.3285pt x 110.21259pt.
 <100_temp_spm.jpg, id=50, 222.07968pt x 451.6875pt>
 File: 100_temp_spm.jpg Graphic file (type jpg)
 <use 100_temp_spm.jpg>
-Package pdftex.def Info: 100_temp_spm.jpg  used on input line 279.
-(pdftex.def)             Requested size: 57.73935pt x 117.43597pt.
+Package pdftex.def Info: 100_temp_spm.jpg  used on input line 285.
+(pdftex.def)             Requested size: 48.85767pt x 99.37155pt.
 <80_temp_spm.jpg, id=51, 241.65282pt x 462.22687pt>
 File: 80_temp_spm.jpg Graphic file (type jpg)
 <use 80_temp_spm.jpg>
-Package pdftex.def Info: 80_temp_spm.jpg  used on input line 281.
-(pdftex.def)             Requested size: 62.82825pt x 120.17615pt.
+Package pdftex.def Info: 80_temp_spm.jpg  used on input line 287.
+(pdftex.def)             Requested size: 53.16377pt x 101.69022pt.
 <60_temp_spm.jpg, id=52, 237.13594pt x 462.22687pt>
 File: 60_temp_spm.jpg Graphic file (type jpg)
 <use 60_temp_spm.jpg>
-Package pdftex.def Info: 60_temp_spm.jpg  used on input line 283.
-(pdftex.def)             Requested size: 61.65388pt x 120.17615pt.
-<wall_heat.jpg, id=53, 137.01187pt x 367.3725pt>
-File: wall_heat.jpg Graphic file (type jpg)
-<use wall_heat.jpg>
-Package pdftex.def Info: wall_heat.jpg  used on input line 297.
-(pdftex.def)             Requested size: 54.80377pt x 146.94638pt.
-<100_heat.jpg, id=54, 511.9125pt x 1406.25375pt>
-File: 100_heat.jpg Graphic file (type jpg)
-<use 100_heat.jpg>
-Package pdftex.def Info: 100_heat.jpg  used on input line 298.
-(pdftex.def)             Requested size: 48.63219pt x 133.59549pt.
-<80_heat.jpg, id=55, 496.85625pt x 1415.2875pt>
-File: 80_heat.jpg Graphic file (type jpg)
-<use 80_heat.jpg>
-Package pdftex.def Info: 80_heat.jpg  used on input line 300.
-(pdftex.def)             Requested size: 47.20183pt x 134.4537pt.
-<60_heat.jpg, id=56, 478.78876pt x 1424.32124pt>
-File: 60_heat.jpg Graphic file (type jpg)
-<use 60_heat.jpg>
-Package pdftex.def Info: 60_heat.jpg  used on input line 302.
-(pdftex.def)             Requested size: 45.4854pt x 135.31192pt.
-File: wall_heat.jpg Graphic file (type jpg)
-<use wall_heat.jpg>
-Package pdftex.def Info: wall_heat.jpg  used on input line 303.
-(pdftex.def)             Requested size: 54.80377pt x 146.94638pt.
-<100_heat_spm.jpg, id=57, 175.40532pt x 463.7325pt>
-File: 100_heat_spm.jpg Graphic file (type jpg)
-<use 100_heat_spm.jpg>
-Package pdftex.def Info: 100_heat_spm.jpg  used on input line 304.
-(pdftex.def)             Requested size: 50.86623pt x 134.47897pt.
-<80_heat_spm.jpg, id=58, 194.97844pt x 478.78876pt>
-File: 80_heat_spm.jpg Graphic file (type jpg)
-<use 80_heat_spm.jpg>
-Package pdftex.def Info: 80_heat_spm.jpg  used on input line 306.
-(pdftex.def)             Requested size: 58.49397pt x 143.63773pt.
-<60_heat_spm.jpg, id=59, 183.68625pt x 447.92343pt>
-File: 60_heat_spm.jpg Graphic file (type jpg)
-<use 60_heat_spm.jpg>
-Package pdftex.def Info: 60_heat_spm.jpg  used on input line 308.
-(pdftex.def)             Requested size: 55.1063pt x 134.37805pt.
-<concentration.jpg, id=60, 135.50626pt x 367.3725pt>
-File: concentration.jpg Graphic file (type jpg)
-<use concentration.jpg>
-Package pdftex.def Info: concentration.jpg  used on input line 333.
-(pdftex.def)             Requested size: 40.65218pt x 110.21259pt.
-<100_concentration.jpg, id=61, 737.75626pt x 1423.56844pt>
-File: 100_concentration.jpg Graphic file (type jpg)
-<use 100_concentration.jpg>
-Package pdftex.def Info: 100_concentration.jpg  used on input line 334.
-(pdftex.def)             Requested size: 62.71408pt x 121.01257pt.
-<80_concentration.jpg, id=62, 774.64406pt x 1437.11906pt>
-File: 80_concentration.jpg Graphic file (type jpg)
-<use 80_concentration.jpg>
-Package pdftex.def Info: 80_concentration.jpg  used on input line 336.
-(pdftex.def)             Requested size: 65.84978pt x 122.16446pt.
-<60_concentration.jpg, id=63, 748.29562pt x 1424.32124pt>
-File: 60_concentration.jpg Graphic file (type jpg)
-<use 60_concentration.jpg>
-Package pdftex.def Info: 60_concentration.jpg  used on input line 338.
-(pdftex.def)             Requested size: 63.60999pt x 121.07657pt.
-File: concentration.jpg Graphic file (type jpg)
-<use concentration.jpg>
-Package pdftex.def Info: concentration.jpg  used on input line 339.
-(pdftex.def)             Requested size: 40.65218pt x 110.21259pt.
-<100_concentration_spm.jpg, id=64, 229.60782pt x 451.6875pt>
-File: 100_concentration_spm.jpg Graphic file (type jpg)
-<use 100_concentration_spm.jpg>
-Package pdftex.def Info: 100_concentration_spm.jpg  used on input line 340.
-(pdftex.def)             Requested size: 61.99493pt x 121.95724pt.
-<80_concentration_spm.jpg, id=65, 241.65282pt x 462.22687pt>
-File: 80_concentration_spm.jpg Graphic file (type jpg)
-<use 80_concentration_spm.jpg>
-Package pdftex.def Info: 80_concentration_spm.jpg  used on input line 342.
-(pdftex.def)             Requested size: 65.24713pt x 124.80292pt.
-<60_concentration_spm.jpg, id=66, 241.65282pt x 462.22687pt>
-File: 60_concentration_spm.jpg Graphic file (type jpg)
-<use 60_concentration_spm.jpg>
-Package pdftex.def Info: 60_concentration_spm.jpg  used on input line 344.
-(pdftex.def)             Requested size: 65.24713pt x 124.80292pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--349
-
- []
+Package pdftex.def Info: 60_temp_spm.jpg  used on input line 289.
+(pdftex.def)             Requested size: 52.17006pt x 101.69022pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--349
-
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--349
+Underfull \vbox (badness 1430) has occurred while \output is active []
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--349
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--349
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--349
-
- []
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -918,6 +768,65 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 [8 <./bar_100.png (PNG copy)> <./bar_80.png (PNG copy)> <./bar_60.png (PNG copy
 )> <./velo.jpg> <./100_velo.jpg> <./80_velo.jpg> <./60_velo.jpg> <./100_velo_sp
 m.jpg> <./80_velo_spm.jpg> <./60_velo_spm.jpg>]
+<wall_heat.jpg, id=56, 137.01187pt x 367.3725pt>
+File: wall_heat.jpg Graphic file (type jpg)
+<use wall_heat.jpg>
+Package pdftex.def Info: wall_heat.jpg  used on input line 320.
+(pdftex.def)             Requested size: 41.10387pt x 110.21259pt.
+<100_heat.jpg, id=57, 511.9125pt x 1406.25375pt>
+File: 100_heat.jpg Graphic file (type jpg)
+<use 100_heat.jpg>
+Package pdftex.def Info: 100_heat.jpg  used on input line 322.
+(pdftex.def)             Requested size: 38.39177pt x 105.46448pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--322
+[]\T1/txr/m/n/8 (a) |100%
+ []
+
+<80_heat.jpg, id=58, 496.85625pt x 1415.2875pt>
+File: 80_heat.jpg Graphic file (type jpg)
+<use 80_heat.jpg>
+Package pdftex.def Info: 80_heat.jpg  used on input line 324.
+(pdftex.def)             Requested size: 37.2626pt x 106.14198pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
+[]\T1/txr/m/n/8 (b) |81%
+ []
+
+<60_heat.jpg, id=59, 478.78876pt x 1424.32124pt>
+File: 60_heat.jpg Graphic file (type jpg)
+<use 60_heat.jpg>
+Package pdftex.def Info: 60_heat.jpg  used on input line 326.
+(pdftex.def)             Requested size: 35.9076pt x 106.81947pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]\T1/txr/m/n/8 (c) |60%
+ []
+
+File: wall_heat.jpg Graphic file (type jpg)
+<use wall_heat.jpg>
+Package pdftex.def Info: wall_heat.jpg  used on input line 327.
+(pdftex.def)             Requested size: 41.10387pt x 110.21259pt.
+<100_heat_spm.jpg, id=60, 175.40532pt x 463.7325pt>
+File: 100_heat_spm.jpg Graphic file (type jpg)
+<use 100_heat_spm.jpg>
+Package pdftex.def Info: 100_heat_spm.jpg  used on input line 329.
+(pdftex.def)             Requested size: 43.85121pt x 115.93283pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[]\T1/txr/m/n/8 (d) |100%
+ []
+
+<80_heat_spm.jpg, id=61, 194.97844pt x 478.78876pt>
+File: 80_heat_spm.jpg Graphic file (type jpg)
+<use 80_heat_spm.jpg>
+Package pdftex.def Info: 80_heat_spm.jpg  used on input line 331.
+(pdftex.def)             Requested size: 46.79578pt x 114.91164pt.
+<60_heat_spm.jpg, id=62, 183.68625pt x 447.92343pt>
+File: 60_heat_spm.jpg Graphic file (type jpg)
+<use 60_heat_spm.jpg>
+Package pdftex.def Info: 60_heat_spm.jpg  used on input line 333.
+(pdftex.def)             Requested size: 45.92143pt x 111.98058pt.
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
@@ -925,39 +834,65 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [9 <./temp.jpg> <./100_temp.jpg> <./80_temp.jpg> <./60_temp.jpg> <./100_temp_sp
 m.jpg> <./80_temp_spm.jpg> <./60_temp_spm.jpg>]
+<concentration.jpg, id=66, 135.50626pt x 367.3725pt>
+File: concentration.jpg Graphic file (type jpg)
+<use concentration.jpg>
+Package pdftex.def Info: concentration.jpg  used on input line 341.
+(pdftex.def)             Requested size: 33.87646pt x 91.8429pt.
+<100_concentration.jpg, id=67, 737.75626pt x 1423.56844pt>
+File: 100_concentration.jpg Graphic file (type jpg)
+<use 100_concentration.jpg>
+Package pdftex.def Info: 100_concentration.jpg  used on input line 342.
+(pdftex.def)             Requested size: 47.95583pt x 92.53519pt.
+<80_concentration.jpg, id=68, 774.64406pt x 1437.11906pt>
+File: 80_concentration.jpg Graphic file (type jpg)
+<use 80_concentration.jpg>
+Package pdftex.def Info: 80_concentration.jpg  used on input line 344.
+(pdftex.def)             Requested size: 50.35362pt x 93.41602pt.
+<60_concentration.jpg, id=69, 748.29562pt x 1424.32124pt>
+File: 60_concentration.jpg Graphic file (type jpg)
+<use 60_concentration.jpg>
+Package pdftex.def Info: 60_concentration.jpg  used on input line 346.
+(pdftex.def)             Requested size: 48.64091pt x 92.58412pt.
+File: concentration.jpg Graphic file (type jpg)
+<use concentration.jpg>
+Package pdftex.def Info: concentration.jpg  used on input line 347.
+(pdftex.def)             Requested size: 33.87646pt x 91.8429pt.
+<100_concentration_spm.jpg, id=70, 229.60782pt x 451.6875pt>
+File: 100_concentration_spm.jpg Graphic file (type jpg)
+<use 100_concentration_spm.jpg>
+Package pdftex.def Info: 100_concentration_spm.jpg  used on input line 348.
+(pdftex.def)             Requested size: 45.92075pt x 90.33589pt.
+<80_concentration_spm.jpg, id=71, 241.65282pt x 462.22687pt>
+File: 80_concentration_spm.jpg Graphic file (type jpg)
+<use 80_concentration_spm.jpg>
+Package pdftex.def Info: 80_concentration_spm.jpg  used on input line 350.
+(pdftex.def)             Requested size: 48.3297pt x 92.44373pt.
+<60_concentration_spm.jpg, id=72, 241.65282pt x 462.22687pt>
+File: 60_concentration_spm.jpg Graphic file (type jpg)
+<use 60_concentration_spm.jpg>
+Package pdftex.def Info: 60_concentration_spm.jpg  used on input line 352.
+(pdftex.def)             Requested size: 48.3297pt x 92.44373pt.
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [10 <./wall_heat.jpg> <./100_heat.jpg> <./80_heat.jpg> <./60_heat.jpg> <./100_h
-eat_spm.jpg> <./80_heat_spm.jpg> <./60_heat_spm.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 351--356
-
- []
-
-
-Underfull \hbox (badness 1102) in paragraph at lines 351--356
-\T1/txr/m/n/10 The de-vel-oped EE model demon-strated ad-e-quate per-for-mance 
-in pre-dict-ing the flow
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 351--356
-
- []
+eat_spm.jpg> <./80_heat_spm.jpg> <./60_heat_spm.jpg> <./concentration.jpg> <./1
+00_concentration.jpg> <./80_concentration.jpg> <./60_concentration.jpg> <./100_
+concentration_spm.jpg> <./80_concentration_spm.jpg> <./60_concentration_spm.jpg
+>]
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 382.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
-[11 <./concentration.jpg> <./100_concentration.jpg> <./80_concentration.jpg> <.
-/60_concentration.jpg> <./100_concentration_spm.jpg> <./80_concentration_spm.jp
-g> <./60_concentration_spm.jpg>]
-LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 376.
-
+[11]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
@@ -965,13 +900,13 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [12] (SACAM_BRAD_REV_A.aux) ) 
 Here is how much of TeX's memory you used:
- 7068 strings out of 479616
- 102785 string characters out of 2863101
- 403373 words of memory out of 3000000
- 24092 multiletter control sequences out of 15000+200000
+ 7087 strings out of 479616
+ 103314 string characters out of 2863101
+ 398537 words of memory out of 3000000
+ 24108 multiletter control sequences out of 15000+200000
  477556 words of font info for 143 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,22n,88p,946b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 83i,22n,88p,1235b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/RWLBRA001/AppData/Local/Programs/MiKTeX/
 fonts/enc/dvips/base/8r.enc}<C:/Users/RWLBRA001/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/txfonts/rtcxr.pfb><C:/Users/RWLBRA001/AppData/Local/Programs/
@@ -987,7 +922,7 @@ tic/uhvr8a.pfb><C:/Users/RWLBRA001/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/times/utmb8a.pfb><C:/Users/RWLBRA001/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/times/utmr8a.pfb><C:/Users/RWLBRA001/AppData/Local/Programs/MiKTeX/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on SACAM_BRAD_REV_A.pdf (12 pages, 4853766 bytes).
+Output written on SACAM_BRAD_REV_A.pdf (12 pages, 4858861 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -5,6 +5,8 @@
 \usepackage[varg]{txfonts}   % Web of Conferences font
 \usepackage[caption = false]{subfig}
 \usepackage{float}
+\usepackage{indentfirst}
+\usepackage{inputenc}
 
 %
 \begin{document}
@@ -26,8 +28,8 @@ The use of a thermal non-equilibrium Eulerian-Eulerian model for the simulation 
 %
 \maketitle
 %
-\section{Introduction}
-\label{intro}
+\section{Introduction}\label{intro}
+
 The mid-merit operation of Coal-Fired Power Plants (CFPP) arises from the intermittent supply of electricity produced by renewable sources. Research into the flexible/mid-merit operation of power plants is needed to better understand the dynamic operations arising from these off-design conditions if renewable energy sources are to be integrated onto electrical grids.
 
 Three-dimensional computational fluid dynamics (CFD) can capture the thermal performance of CFPPs at different load conditions with the necessary accuracy. These 3D CFD models include the modelling of combustion, radiation, and fluid flow phenomena. The traditional method for modelling
@@ -46,7 +48,8 @@ The time-averaged steady-state continuity, momentum, k-$\epsilon$ turbulence  an
 
 \begin{equation}\label{eqn_general}
 \underbrace{\frac{\partial}{\partial x_{i}}(\rho u_{i}\phi)}_{\text{Convective}}= \underbrace{\frac{\partial}{\partial x_{i}}(\Gamma\frac{\partial \phi}{\partial x_{i}})}_{\text{Diffusion}}+\underbrace{S_{\phi}}_{\text{Source}} 
-\end{equation}\\
+\end{equation}
+
 In the present work the flue gas phase is modelled using the species-transport approach where a transport equation is solved for each constituent mass fraction in the gas mixture. The governing equations for the gas phase can be written as follows;\\
 Mass conservation:
 \begin{equation}\label{eqn_RANS_mass}
@@ -57,19 +60,19 @@ Momentum conservation:
 \begin{equation}\label{eqn_momentum}
 \frac{\partial}{\partial x_{i}}(\rho u_{i}u_{j})+\frac{\partial \overline{P}}{\partial x_{j}}=\frac{\partial}{\partial x_{i}}\left[\mu\left\{\frac{\partial u_{j}}{\partial x_{i}}+\frac{\partial u_{i}}{\partial x_{j}}-\frac{2}{3}\delta_{ij}\frac{\partial u_{i}}{\partial x_{i}}\right\}\right]+\frac{\partial}{\partial x_{i}}(-\rho\overline{u_{i}^{'}u_{j}^{'}})+S_m
 \end{equation}
+
 The momentum equation is closed off by approximating the Reynolds stresses using the Boussinesq relationship as shown in equation \ref{eqn_bouss}.
 \begin{equation}\label{eqn_bouss}
 -\rho\overline{u_{i}^{'}u_{j}^{'}}=\mu_{t}\left(\frac{\partial u_{i}}{\partial x_{j}}+\frac{\partial u_{j}}{\partial x_{i}}\right)-\frac{2}{3}\left(\rho k+\mu_{t}\delta_{ij}\frac{\partial u_{k}}{\partial x_{k}}\right)
 \end{equation}
-\\
+
 This approximation is used in conjunction with the realizable k-$\epsilon$ turbulence model \cite{shih} in this study, taking advantage of the low computational cost associated with the two-equation turbulence models. 
-\\
 \\
 Energy conservation:
 \begin{equation}\label{eqn_energy}
 \frac{\partial }{\partial x_{i}} (u_{i}[\rho E+P])=\frac{\partial }{\partial x_{j}}\left[\lambda\frac{\partial T_{g}}{\partial x_{j}}\right] +S_{h}
 \end{equation}
-\\
+where $E$ in the total energy term, $P$ the pressure, $\lambda$ is the effective thermal conductivity and $T_g$ is the gas temperature.\\
 Species transport:
 \begin{equation}\label{eqn_species}
 \begin{split}
@@ -77,12 +80,12 @@ Species transport:
 &k = 1,2,3...N
 \end{split}
 \end{equation}
-where $k$ is the number of species present in the domain. $\sum_r R_{j,k}$ is the net rate of production of species $j$ due to $r$ reactions.
+where $k$ is the number of species present in the domain and $\vec{J_{k}}$ is the species diffusion flux. $\sum_r R_{j,k}$ is the net rate of production of species $j$ due to $r$ reactions.
 
  To correctly account for the particle inertial effects on the gas phase convection a effective density is defined as follows and used in the above equations
 
 \begin{equation} \label{eff_rho}
-	\rho = \frac{\rho_{g} \rho_p \left( \phi_{mp} + 1 \right)}{\rho_g \phi_{mp} + \rho_p}
+	\rho_{eff} = \frac{\rho_{g} \rho_p \left( \phi_{mp} + 1 \right)}{\rho_g \phi_{mp} + \rho_p}
 \end{equation}
 
 In equation \eqref{eff_rho}, $\rho_g$ is the ideal gas density of the gas mixture, $\rho_p$ is the particulate matter density and $\phi_{mp}$ $[\frac{kg_p}{kg_g}]$ is the local mass concentration of particulate matter. 
@@ -111,30 +114,28 @@ The energy transport of the pseudo particle, is transported by defining the part
 \begin{equation}\label{eqn_phi_hp}
 \frac{\partial}{\partial x_{i}}(\rho u_{i} \phi_{hp})=\left(f_{heat}\frac{dM_{c}}{dt}h_{rxn} + \dot{Q}_{rad} + \dot{Q}_{conv} - \frac{dM_{evap}}{dt}h_{fg}\right)\frac{1}{V}
 \end{equation}
-\\
-The equation accounts for all the processes associated with energy transport to the particle, giving the model the ability to track the particle temperature in the domain, moving the model away from the thermal equilibrium approach incorporated by previous studies using an EE approach (\cite{epple}, \cite{knaus}). The importance of the the particle temperature is important in describing the sequential steps found in modelling combustion processes, especially at low boiler loads where mixing and ignition becomes probablamatic.
+
+The equation accounts for all the processes associated with energy transport to the particle, namely convection $\dot{Q}_{conv}$, radiation $\dot{Q}_{rad}$, latent heat $\frac{dM_{evap}}{dt}h_{fg}$ and near surface char oxidation $f_{heat}\frac{dM_{c}}{dt}h_{rxn}$. This gives the model the ability to track the particle temperature in the domain, moving the model away from the thermal equilibrium approach incorporated by previous studies using an EE approach (\cite{epple}, \cite{knaus}). The importance of the the particle temperature is important in describing the sequential steps found in modelling combustion processes, especially at low boiler loads where mixing and ignition becomes probablamatic.
 
 \subsubsection{Combustion modelling}
 The combustion modelling of coal is comprised of four sequential steps, namely the heating/cooling of the particles, evaporation, devolatilization and char oxidation. The process starts with the pseudo-particles entering the domain and heating up until the moistures boiling temperature of 373 K is reached \cite{cengel}. The realization of the boiling temperature would release moisture based on a boiling rate which is defined as:
-\\
+
 \begin{equation}\label{eqn_evap_release}
 \frac{dM_{evap}}{dt}h_{fg}=\dot{Q}_{rad} + \dot{Q}_{conv}.
 \end{equation}
-\\
+
 Following this is the devolatilization process whereby the volatiles present in the fuel are liberated. The initialization temperature of the devolatilization process was found to vary between $280 - 350\;^{\circ}C$ for a variety of coals by Ranade and Gupta \cite{gupta}, thus particle heating would need to ensue after the moisture evaporation to bring the particles to the initialization temperature. A single-step Arrhenius kinetic rate model is used to approximate the devolatilization process since these models can predict the devolatilization of coal and are simpler to implement, according to Sankar et al \cite{sankar}). The rate is expressed in equation \ref{eqn_vol_release} as:\\
 \begin{equation}\label{eqn_vol_release}
 \frac{dM_{vol}}{dt}=R_{vol}(m_{0,vol}-m_{vol}).
-\end{equation}\\
-where $R_{vol} = A_{vol} \exp(-E_{a,vol} / R T_p)$, with $A_{vol} = 2E5$ $[s^{-1}]$ and $E_{a,vol} = 6.7E7$ $[J/kmol]$ . %Put reference in here
+\end{equation}
+where $R_{vol} = A_{vol} \exp(-E_{a,vol} / R T_p)$, with $A_{vol} = 2E5$ $[s^{-1}]$ and $E_{a,vol} = 6.7E7$ $[J/kmol]$  from the works of Sheng et al \cite{sheng}. %Put reference in here
 
 The final step of the solid fuel combustion process is realized when all the volatiles have been driven off of the pseudo-particles. The product species of the char oxidation process is CO, with 100\% of the resultant heat being absorbed by the pseudo-particle contributing to the energy rise of the particle matter in a cell. The char oxidation rate is derived from the works of Baum and Street \cite{baum} and Spalding \cite{spalding}. The model is commonly referred to as the diffusion-kinetics limited model, written as:
 \begin{equation}\label{eqn_char_release}
-\frac{dm_c}{dt}=-A_{p}\frac{R_{c}R_{diff}}{R_{c}+R_{diff}}P_{O_{2}}
+\frac{dM_c}{dt}=-A_{p}\frac{R_{c}R_{diff}}{R_{c}+R_{diff}}P_{O_{2}}
 \end{equation}
-\\
-The interested reader is directed to \cite{ansys} for an in-depth derivation of the above equation. The kinetic parameter $R_{c} = A_{c} \exp(-E_{a,c} / R T_p)$, where $A_c = 0.0053$ $[kg/m^3]$ and $E_{a,c} = 8.37E7$ $[J/kmol]$. According to Sankar et al \cite{sankar}, the gas phase reactions in boilers are fast with the chemical time scales being orders of magnitude faster than turbulent mixing time scales. This leads to a mixed-is burnt assumption being adequate for species and temperature distribution predictions. The gas-phase volatile and CO reactions are approximated using the two-step global reaction shown in equation \ref{eqn_volatiles}. 
-%Add reference for coal kinetic parameters above
 
+The interested reader is directed to \cite{ansys} for an in-depth derivation of the above equation. The kinetic parameter $R_{c} = A_{c} \exp(-E_{a,c} / R T_p)$, where $A_c = 0.0053$ $[kg/m^3]$ and $E_{a,c} = 8.37E7$ $[J/kmol]$ from the works of Sheng et al \cite{sheng} and Hanjalić et al \cite{han}. According to Sankar et al \cite{sankar}, the gas phase reactions in boilers are fast with the chemical time scales being orders of magnitude faster than turbulent mixing time scales. This leads to a mixed-is burnt assumption being adequate for species and temperature distribution predictions. The gas-phase volatile and CO reactions are approximated using the two-step global reaction shown in equation \ref{eqn_volatiles}. 
 \begin{equation}\label{eqn_volatiles}
 \begin{split}
 &\underbrace{CH_{3.51}O_{0.78}N_{0.1106}S_{0.0466}}_{Volatiles}+1.03O_2\to CO + 1.75H_2O + 0.0466SO_{2} + 0.0553N_2\\
@@ -142,29 +143,28 @@ The interested reader is directed to \cite{ansys} for an in-depth derivation of 
 \end{split}
 \end{equation}
 
-This work makes use of the two-step finite-rate/eddy-dissipation model (FR/EDM) in ANSYS Fluent® 19.3 \cite{ansys} to calculate the gaseous reaction rates. The model calculates three rates and uses the minimum of the three values for the source term calculations for the species transport equations and subsequently for the energy release source terms.\\
-
+This work makes use of the two-step finite-rate/eddy-dissipation model (FR/EDM) in ANSYS Fluent® 19.3 \cite{ansys} to calculate the gaseous reaction rates. The model calculates three rates and uses the minimum of the three values for the source term calculations for the species transport equations and subsequently for the energy release source terms.
 Chemical reaction rate:
 \begin{equation}\label{eqn_rate_chemical}
 R_{j,r,chemical}=A_{r}exp\left(\frac{-E_{a,r}}{RT_g}\right)\left[\vartheta^{'}_{k,r}-\vartheta_{k,r}\right]\prod_{L}\left[C_{l,r}\right]^{m,r}
-\end{equation}\\
+\end{equation}
 Rate of turbulent production eddies dissipation:
 \begin{equation}\label{eqn_rate_products}
 R_{j,r,prodcution}=\vartheta_{k,r}M_{w,k}AB\rho\frac{\varepsilon}{k}min\left(\frac{\sum_{p} Y_p}{\sum_{j}\vartheta_{j,r}M_{w,j}}\right)
-\end{equation}\\
+\end{equation}
 Rate of reaction eddies dissipation:
 \begin{equation}\label{eqn_rate_reactants}
 R_{j,r,reactant}=\vartheta_{k,r}M_{w,k}A\rho\frac{\varepsilon}{k}min\left(\frac{Y_R}{\varepsilon_{R,r}M_{w,R}}\right)
 \end{equation}
 
+In the above equations $Y_p$ is the product species mass fraction, $Y_R$ is the mass fraction of any reaction species, $A$ and $B$ are model constants, $M_{w,k}$ is the molecular weight of $j^{th}$ species, $\vartheta_{k,r}$ is the stoichiometric coefficient of reactant $k$ in reaction $r$, $[C_{l,r}]^{m,r}$ is the molar concentration of species $l$ in reaction $r$ with rate exponent $m$, $A_r=2.56E11$ $s^{-1}$ and $E_{a,r}=1.081E8$ $J/kmol$ taken from the works of He et al \cite{he}.   
 \subsubsection{Radiation modelling}
 
 The heat transfer to the furnace, platen and final superheater walls in the case validation is mainly due to radiation. The radiation transport for the current work was resolved using the P1 radiation model which includes the effects of particle absorption ($\alpha_p$) and scattering ($\sigma_p$) as well as gas mixture absorption ($\alpha_g$). The P1 model transport variable is the incident radiation (G - $W/m^2$), and can be written for a particle laden domain as:
-
 \begin{equation}
 \frac{\partial}{\partial x_{i}}\left(\Gamma\frac{\partial G}{\partial x_{i}}\right)=\left(\alpha_g+\alpha_p)\right)G-4\left(\alpha_g \sigma_{SB} T_{g}^4-\pi E_p \right)
 \end{equation}
-\\
+
 The gas mixture absorption coefficient was calculated using the weighted sum of gray gases model (WSGGM) which accounts for the tri-atomic gases $CO_2$ and $H_2O$ as proposed by Smith et al \cite{smith}. The solid phase radiative properties (namely $\alpha_p$, $\sigma_p$ and $E_p$) were determined using an equivalent Eulerian description for each expressed as:\\
 \begin{equation}
 \alpha_p \equiv \frac{\epsilon_{p,n}A_{proj}N_p}{V}
@@ -175,7 +175,7 @@ The gas mixture absorption coefficient was calculated using the weighted sum of 
 \begin{equation}
 E_p \equiv \frac{\epsilon_{p,n}A_{proj}\sigma_{SB} T_{p}^4 N_p}{\pi V}
 \end{equation}
-where $N_p = \rho \phi_{mp0} V / \left( \rho_p \pi \bar{d_p}^3 /6 \right)$, is the number of particles present based off of the average diameter pseudo particle size and $A_{proj} = N_p \pi d_p^2 / 4 V$ is the projected area. The particles emissivity ($\epsilon_p$) and scattering factor ($f_p$) were implemented using a variable property correlation as used in the work of Laubscher and Rousseau \cite{laubscher_3}.
+where $N_p = \rho \phi_{mp0} V / \left( \rho_p \pi \bar{d_p}^3 /6 \right)$, is the number of particles present based off of the average diameter pseudo particle size, $A_{proj} = N_p \pi d_p^2 / 4 V$ is the projected area, $\sigma_{SB} = 5.67E-8 W/m^2K^4$, $T_p$ is the particle temperature and $V$ is the cell volume. The particles emissivity ($\epsilon_p$) and scattering factor ($f_p$) were implemented using a variable property correlation as used in the work of Laubscher and Rousseau \cite{laubscher_3}.
 
 \subsection{Numerical setup and model inputs} \label{Setup}
 The modelling methodology, described previously, was successfully incorporated in the modelling of a 620 MWe subcritical power boiler. Figure \ref{comp_dom} illustrates the computational domain used in this validation study highlighting the various heat receiving surfaces and inlets. The burner feeds the combustion chamber with primary and secondary air through the burners inner and outer annuli respectively. At 100\% maximum continuous rating (MCR) the primary air (PA) supplies the fuel and air at a temperature of 373 K and secondary air (SA) enters at a temperature of 577 K.\\
@@ -211,9 +211,9 @@ Energy Content & As-received - ($kJ/kg_{fuel}$)\\
 HHV & 15070 \\
 \hline
 \end{tabular}
-\end{table}\\
-\\
-The plant in designed to operate at a 100\% MCR with a excess air ratio of 15.5\%. As the plant is turned down from 100\% MCR the excess air ratio is increased to ensure sufficient air and fuel mixing occurs. At MCR ratings of 81\% and 60\% the excess ratios were calculated as 20.9\% and 26.3\% respectively, based off of the design schedules. The inlet flow rates and temperatures for the plants MCR rating 100\%, 81\% and 60\% are listed in table \ref{tab_inlets}.\\
+\end{table}
+
+The plant in designed to operate at a 100\% MCR with a excess air ratio of 15.5\%. As the plant is turned down from 100\% MCR the excess air ratio is increased to ensure sufficient air and fuel mixing occurs. At MCR ratings of 81\% and 60\% the excess ratios were calculated as 20.9\% and 26.3\% respectively, based off of the design schedules. The inlet flow rates and temperatures for the plants MCR rating 100\%, 81\% and 60\% are listed in table \ref{tab_inlets}.
 \begin{table}[h!]
 \centering
 \caption{Inlet conditions for simulated load cases (per burner)}\label{tab_inlets}       
@@ -238,6 +238,7 @@ The discrete phase equations, for the EL model, were solved once every 30 fluid 
 To ensure a stable converged solution the spatial discretization for all fields were set to first order upwind (except pressure) and solved for 1500 iterations before increasing the discretization order. The simulations were then run for a further 10000 iterations. For all cases the maximum mass imbalance was 0.046 kg/s for a total gas flow rate of 376 kg/s. The maximum heat imbalance was 2450 kW for a total heat input of 855 MW.
 
 \section{Results and discussion} \label{Results}
+
 The results discussed herewith compare an experimental numerical model, using the EL reference frame, to that of the developed EE modelling approach, (discussed in section \ref{Theory}) for 100\%, 81\% and 60\% MCR loads cases. Overall a 30\% (9 hours to approximately 6 hours) decrease in simulation time was observed across the simulated load cases with a 5\% relative accuracy when using the EE model. The graphs of figure \ref{fig_heat_load} illustrate the measured plant data, numerical and EE models results,  for the heat loads to the furnace, platen and high temperature superheater (HTSH) walls. 
 \begin{figure}[h!]
 \centering
@@ -249,71 +250,50 @@ The results discussed herewith compare an experimental numerical model, using th
 \setlength{\belowcaptionskip}{0pt}
 \caption{Overall heat load performance for 100\%, 81\% and 60\% MCR load cases}
 \label{fig_heat_load}
-\end{figure}\\
+\end{figure}
+
 The general accuracy of the EE model is seen to be able to sufficiently capture the overall heat loads when compared to the measured and experimental results. A notable difference is seen in the 60\% load case of figure \ref{fig_heat_load_c}, where both the experimental and EE model under-predict the platens heat load, which could be due to incorrect site measurement data.
 \begin{figure}[h!]
 \centering
 \includegraphics[scale = 0.3]{velo}
-\subfloat[100\% case]{\includegraphics[scale = 0.085]{100_velo}}
+\subfloat[100\% case]{\includegraphics[scale = 0.075]{100_velo}}
 \hspace{10mm} 
-\subfloat[81\% case]{\includegraphics[scale = 0.085]{80_velo}}
+\subfloat[81\% case]{\includegraphics[scale = 0.075]{80_velo}}
 \hspace{10mm} 
-\subfloat[60\% case]{\includegraphics[scale = 0.085]{60_velo}}\\
+\subfloat[60\% case]{\includegraphics[scale = 0.075]{60_velo}}\\
 \includegraphics[scale = 0.3]{velo}
-\subfloat[100\% case]{\includegraphics[scale = 0.27]{100_velo_spm}}
+\subfloat[100\% case]{\includegraphics[scale = 0.22]{100_velo_spm}}
 \hspace{10mm} 
-\subfloat[81\% case]{\includegraphics[scale = 0.27]{80_velo_spm}} 
+\subfloat[81\% case]{\includegraphics[scale = 0.22]{80_velo_spm}} 
 \hspace{10mm} 
-\subfloat[60\% case]{\includegraphics[scale = 0.27]{60_velo_spm}} 
+\subfloat[60\% case]{\includegraphics[scale = 0.22]{60_velo_spm}} 
 \setlength{\belowcaptionskip}{0pt}
 \caption{Gas velocity contour plots for the numerical (a-c) and EE model (d-f) simulated load cases}
 \label{fig_velocity}
-\end{figure}\\
+\end{figure}
 
 Figure \ref{fig_velocity} compares the gas velocity contour plots for the numerical and EE model. It can be seen that results are in good agreement. The EE model tends to under predict the lower burner velocity transport resulting in combustion occurring closer to the burner mouth and lower furnace walls. This effect is seen in both the temperature contour plots of figure \ref{fig_temp} (d-f) and wall heat flux contours of figure \ref{fig_wall_heat} (d-f).
 \begin{figure}[h!]
 \centering
 \includegraphics[scale = 0.3]{temp} 
-\subfloat[100\% case]{\includegraphics[scale = 0.082]{100_temp}}
+\subfloat[100\% case]{\includegraphics[scale = 0.075]{100_temp}}
 \hspace{10mm}  
-\subfloat[81\% case]{\includegraphics[scale = 0.082]{80_temp}}
+\subfloat[81\% case]{\includegraphics[scale = 0.075]{80_temp}}
 \hspace{10mm} 
-\subfloat[60\% case]{\includegraphics[scale = 0.082]{60_temp}}\\
+\subfloat[60\% case]{\includegraphics[scale = 0.075]{60_temp}}\\
 \includegraphics[scale = 0.3]{temp}
-\subfloat[100\% case]{\includegraphics[scale = 0.26]{100_temp_spm}}
+\subfloat[100\% case]{\includegraphics[scale = 0.22]{100_temp_spm}}
 \hspace{10mm} 
-\subfloat[81\% case]{\includegraphics[scale = 0.26]{80_temp_spm}} 
+\subfloat[81\% case]{\includegraphics[scale = 0.22]{80_temp_spm}} 
 \hspace{10mm} 
-\subfloat[60\% case]{\includegraphics[scale = 0.26]{60_temp_spm}} 
+\subfloat[60\% case]{\includegraphics[scale = 0.22]{60_temp_spm}} 
 \setlength{\belowcaptionskip}{0pt}
 \caption{Temperature plots for the numerical (a-c) and EE model (d-f) simulated load cases}
 \label{fig_temp}
-\end{figure}\\
+\end{figure}
+
 The temperature contour plots of figure \ref{fig_temp} (d-f) illustrates the EE models ability to sufficiently resolve the temperature profiles when compared to the numerical model. The lower burners tend to initiate combustion closer to the burner leading to high temperatures, due to the lack of velocity of the gas phase in this area the high temperatures  are closer to the walls of the furnace leading to a higher heat flux observed as seen in figure \ref{fig_wall_heat} (d-f). In general the temperature and velocity of profiles are deemed sufficiently accurate for the purposes of surrogate model development, since the parameter of interest is the resolution of the wall flux field.
 
-The heat flux profiles are given in figure \ref{fig_wall_heat} (a-f). The EE model over predicts the wall flux profiles in the lower half of the boiler, namely due to the high temperatures experienced in these zones in and around the bottom burners. The platen and HTSH radiant superheaters show a similar flux profiles with the top half of the furnace illustrating sufficient accuracy between the numerical and EE model.\\
-\\
-\\
-\\
-\\
-\begin{figure}[h!]
-\centering
-\includegraphics[scale = 0.4]{wall_heat}
-\subfloat[100\% case]{\includegraphics[scale = 0.095]{100_heat}} 
-\hspace{10mm} 
-\subfloat[81\% case]{\includegraphics[scale = 0.095]{80_heat}}
-\hspace{10mm} 
-\subfloat[60\% case]{\includegraphics[scale = 0.095]{60_heat}}\\
-\includegraphics[scale = 0.4]{wall_heat}
-\subfloat[100\% case]{\includegraphics[scale = 0.29]{100_heat_spm}}
-\hspace{10mm} 
-\subfloat[81\% case]{\includegraphics[scale = 0.3]{80_heat_spm}} 
-\hspace{10mm} 
-\subfloat[60\% case]{\includegraphics[scale = 0.3]{60_heat_spm}}
-\setlength{\belowcaptionskip}{0pt} 
-\caption{Wall heat flux profiles for the numerical (a-c) and EE model (d-f) simulated load cases}
-\label{fig_wall_heat}
-\end{figure}\\
 Table \ref{tab_rel_err} highlights the relative errors obtained between the numerical and EE model. The maximum error of 8.15\% occurs in the platen superheater for the 100\% load case. The relative errors are deemed acceptable for the decrease in computational time required by the EE model.
 \begin{table}[h!]
 \centering
@@ -330,26 +310,51 @@ Exit X\textsubscript{CO\textsubscript{2}} fraction & 2.12\% & 1.56\% & 0.98\% \\
 Exit X\textsubscript{O\textsubscript{2}} fraction & 1.86\% &3.21\% & 2.84\%\\
 \hline
 \end{tabular}
-\end{table}\\
+\end{table}
+
+The heat flux profiles are given in figure \ref{fig_wall_heat} (a-f). The EE model over predicts the wall flux profiles in the lower half of the boiler, namely due to the high temperatures experienced in these zones in and around the bottom burners. The platen and HTSH radiant superheaters show a similar flux profiles with the top half of the furnace illustrating sufficient accuracy between the numerical and EE model.
+
 The spatial distribution of the particles (expressed in $kg/m^3$) of figure \ref{fig_concentration} (a-f) highlights the EE models ability to resolve the particle concentration throughout the domain for the various load cases. The general trend of the EE model is with sufficient accuracy when compared to the numerical model.\\
 \begin{figure}[h!]
 \centering
-\includegraphics[scale = 0.3]{concentration}
-\subfloat[100\% case]{\includegraphics[scale = 0.085]{100_concentration}}
-\hspace{10mm}  
-\subfloat[100\% case]{\includegraphics[scale = 0.085]{80_concentration}}
+\includegraphics[scale = 0.3]{wall_heat}
+\hspace{2mm}
+\subfloat[100\% case]{\includegraphics[scale = 0.075]{100_heat}} 
 \hspace{10mm} 
-\subfloat[100\% case]{\includegraphics[scale = 0.085]{60_concentration}}\\
-\includegraphics[scale = 0.3]{concentration}
-\subfloat[100\% case]{\includegraphics[scale = 0.27]{100_concentration_spm}}
+\subfloat[81\% case]{\includegraphics[scale = 0.075]{80_heat}}
 \hspace{10mm} 
-\subfloat[100\% case]{\includegraphics[scale = 0.27]{80_concentration_spm}}
+\subfloat[60\% case]{\includegraphics[scale = 0.075]{60_heat}}\\
+\includegraphics[scale = 0.3]{wall_heat}
+\hspace{1mm}
+\subfloat[100\% case]{\includegraphics[scale = 0.25]{100_heat_spm}}
+\hspace{7mm} 
+\subfloat[81\% case]{\includegraphics[scale = 0.24]{80_heat_spm}} 
+\hspace{7mm} 
+\subfloat[60\% case]{\includegraphics[scale = 0.25]{60_heat_spm}}
+\setlength{\belowcaptionskip}{0pt} 
+\caption{Wall heat flux profiles for the numerical (a-c) and EE model (d-f) simulated load cases}
+\label{fig_wall_heat}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.25]{concentration}
+\subfloat[100\% case]{\includegraphics[scale = 0.065]{100_concentration}}
 \hspace{10mm}  
-\subfloat[100\% case]{\includegraphics[scale = 0.27]{60_concentration_spm}}
+\subfloat[100\% case]{\includegraphics[scale = 0.065]{80_concentration}}
+\hspace{10mm} 
+\subfloat[100\% case]{\includegraphics[scale = 0.065]{60_concentration}}\\
+\includegraphics[scale = 0.25]{concentration}
+\subfloat[100\% case]{\includegraphics[scale = 0.2]{100_concentration_spm}}
+\hspace{10mm} 
+\subfloat[100\% case]{\includegraphics[scale = 0.2]{80_concentration_spm}}
+\hspace{10mm}  
+\subfloat[100\% case]{\includegraphics[scale = 0.2]{60_concentration_spm}}
 \setlength{\belowcaptionskip}{0pt} 
 \caption{Spatial particle concentration profiles for the numerical (a-c) and EE model (d-f) simulated load cases}
 \label{fig_concentration}
 \end{figure}
+\newpage
 
 \section{Conclusion}
 The validation of a full scale 620 MWe boiler was conducted using a thermal non-equilibrium Eulerian-Eulerian model for three load cases, namely 100\%, 81\% and 60\% steady-state loads. The valdiation cases include a comparison to numerical model using a Eulerian-Lagrangian aprroach and where applicable measured site data.
@@ -367,9 +372,6 @@ The authors would like to thank the Eskom EPPEI program for funding this project
 %
 % Non-BibTeX users please use
 %
-\newpage
-
-
 
 \begin{thebibliography}{}
 %
@@ -412,6 +414,9 @@ Ranade, Vivek V. and Gupta, Devkumar F., \textit{Computational Modeling of Pulve
 \bibitem{sankar}
 Sankar, G., Santhosh Kumar, D. and Balasubramanian, K.R., Fuel -\textit{Computational modeling of pulverized coal fired boilers – A review on the current position}, \textbf{236}, 643-665 (2019)
 
+\bibitem{sheng}
+C. Sheng, B. Moghtaderi, R. Gupta, and T. F. Wall, Fuel - \textit{A computational fluid dynamics based study of the combustion characteristics of coal blends in pulverised coal-fired furnace,”}, \textbf{83}, 1543-1552 (2004)
+
 \bibitem{baum}
 Baum, M.M. and Street, P.J.,Combustion Science and Technology -\textit{Predicting the Combustion Behaviour of Coal Particles Predicting the Combustion Behaviour of Coal Particles}, \textbf{3}, 231-243 (1971) 
 
@@ -419,9 +424,15 @@ Baum, M.M. and Street, P.J.,Combustion Science and Technology -\textit{Predictin
 \bibitem{spalding}
 Spalding, D.B., Symposium (International) on Combustion - \textit{Mixing and Chemical Reaction in Steady Confined Turbulent Flames}, \textbf{13}, (1970)
 
-
 \bibitem{ansys}
 \textit{ANSYS Fluent Theory Guide}, (Ansys Inc., 2021)
+
+\bibitem{han}
+A. Đugum and K. Hanjalić, Energy - \textit{Numerical simulation of coal-air mixture flow in a real double-swirl burner and implications on combustion anomalies in a utility boiler}, (2018)
+
+\bibitem{he}
+B. He et al, Computational Fluids - \textit{Computational fluid dynamics based retrofits to reheater panel overheating of No. 3
+boiler of Dagang Power Plant}. \textbf{36}, 435-444 (2007)
 
 \bibitem{smith}
 Smith T., Shen Z., and Firedman J., Journal of Heat Tranfer - \textit{Evaluation of Coefficients for the Weighted Sum of Gray Gases Model}, \textbf{104}, 602-608 (1982)
