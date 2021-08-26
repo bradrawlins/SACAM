@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.16)  26 AUG 2021 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.16)  26 AUG 2021 16:35
 entering extended mode
 **./SACAM_BRAD_REV_A.tex
 (SACAM_BRAD_REV_A.tex
@@ -722,17 +722,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: bar_100.png Graphic file (type png)
 <use bar_100.png>
 Package pdftex.def Info: bar_100.png  used on input line 271.
-(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
+(pdftex.def)             Requested size: 113.81104pt x 85.82945pt.
 <bar_80.png, id=37, 378.213pt x 285.2256pt>
 File: bar_80.png Graphic file (type png)
 <use bar_80.png>
 Package pdftex.def Info: bar_80.png  used on input line 273.
-(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
+(pdftex.def)             Requested size: 113.81104pt x 85.82945pt.
 <bar_60.png, id=38, 378.213pt x 285.2256pt>
 File: bar_60.png Graphic file (type png)
 <use bar_60.png>
 Package pdftex.def Info: bar_60.png  used on input line 275.
-(pdftex.def)             Requested size: 106.69531pt x 80.46321pt.
+(pdftex.def)             Requested size: 113.81104pt x 85.82945pt.
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
@@ -972,7 +972,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 ] (SACAM_BRAD_REV_A.aux) ) 
 Here is how much of TeX's memory you used:
  7090 strings out of 479616
- 103116 string characters out of 2863101
+ 103126 string characters out of 2863101
  403555 words of memory out of 3000000
  24111 multiletter control sequences out of 15000+200000
  477556 words of font info for 143 fonts, out of 3000000 for 9000
@@ -992,7 +992,7 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txexa.pfb><C:/Users/RWLBRA
 mb8a.pfb><C:/Users/RWLBRA001/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/RWLBRA001/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on SACAM_BRAD_REV_A.pdf (12 pages, 4852874 bytes).
+Output written on SACAM_BRAD_REV_A.pdf (12 pages, 4851974 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

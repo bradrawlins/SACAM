@@ -264,7 +264,7 @@ Exit X\textsubscript{O\textsubscript{2}} fraction & 1.86\% &3.21\% & 2.84\%\\
 \end{tabular}
 \end{table}
 
-The graphs shown in figure \ref{fig_heat_load} illustrate the measured plant data, numerical and EE models results,  for the heat loads to the furnace, platen and high temperature superheater (HTSH) walls.
+The graphs shown in figure \ref{fig_heat_load} illustrate the calculated (based off operational plant measurements), EL and EE models results,  for the heat loads to the furnace, platen and high temperature superheater (HTSH) walls.
 
 \begin{figure}[h!]
 \centering
@@ -359,7 +359,7 @@ The temperature contour plots of figure \ref{fig_temp} (d-f) illustrate the EE m
 \label{fig_concentration}
 \end{figure}
 
-\newpage
+\clearpage
 \section{Conclusion}
 The validation of a full scale 620 MWe boiler was conducted using a thermal non-equilibrium Eulerian-Eulerian model for three load cases, namely 100\%, 81\% and 60\% steady-state loads. The validation cases include a comparison with results obtained by a numerical model using a Eulerian-Lagrangian approach and where applicable measured site data. The developed EE model demonstrated adequate performance in predicting the flow field, wall heat fluxes and fluid property distributions throughout the domain.The relative accuracy of the EE model ranged from 2 to 8\% for key parameters used in the study. The computational speedup, of 30\%, by using the EE model is a beneficial attribute when considering the EE models intended future use in the development of a CFD data-driven surrogate model. 
 
