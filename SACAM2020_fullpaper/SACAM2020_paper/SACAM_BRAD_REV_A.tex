@@ -35,9 +35,9 @@ The mid-merit operation of Coal-Fired Power Plants (CFPP) arises from the interm
 Three-dimensional computational fluid dynamics (CFD) can capture the thermal performance of CFPPs at different load conditions with the necessary accuracy. These 3D CFD models include the modelling of combustion, radiation, and fluid flow phenomena. The traditional method for modelling
 solid-fuel combustion systems, such as CFPPs, is acknowledged as the Eulerian-Lagrangian (EL) approach. Successful implementations, using the EL approach include the following studies \cite{bohnstein},\cite{laubscher_1} and \cite{laubscher_2}, where the latter focused on the effect that the burner swirl direction has on the heat uptake to the furnace and superheater walls of a 620 MWe boiler.\\
 
-Another approach is to use a Eulerian multi-fluid model as used by the following studies \cite{epple}, \cite{cai} and \cite{wu}. Knaus et al \cite{knaus} compared the EE and EL approaches for a 550 MWe coal-fired utility boiler. The predicted combustion products yield only small differences, with carbon monoxide being better predicted when using the Eulerian-Lagrangian approach. The computational effort of the Eulerian approach proved more efficient and faster convergence times were noted. It should be stated, that these studies were conducted using in-house CFD codes which is difficult to apply by engineers and scientists outside the research group.\\
+Another approach is to use a Eulerian multi-fluid model as used by the following studies \cite{epple}, \cite{cai} and \cite{wu}. Knaus et al \cite{knaus} compared the Eulerian-Eulerian (EE) and EL approaches for a 550 MWe coal-fired utility boiler. The predicted combustion products yield only small differences, with carbon monoxide being better predicted when using the Eulerian-Lagrangian approach. The computational effort of the Eulerian approach proved more efficient and faster convergence times were noted. It should be stated, that these studies were conducted using in-house CFD codes which is difficult to apply by engineers and scientists outside the research group.\\
 
-The current work proposes the use of an Eulerian-Eulerian (EE) modelling strategy that incorporates thermal non-equilibrium between the gas and particle phases which allows for adequate particle concentration tracking and heat transfer interactions, with a reduced computational cost when compared to the EL simulation approach. The model is validated for a full scale utility power boiler for various load cases. The validated modelling technique is to be used for future studies in developing a CFD data-driven surrogate model of a 620 MWe CFPP's furnace and radiant superheaters. 
+The current work proposes the use of an EE modelling strategy that incorporates thermal non-equilibrium between the gas and particle phases which allows for adequate particle concentration tracking and heat transfer interactions, with a reduced computational cost when compared to the EL simulation approach. The model is validated for a full scale utility power boiler for various load cases. The validated modelling technique is to be used for future studies in developing a CFD data-driven surrogate model of a 620 MWe CFPP's furnace and radiant superheaters. 
 
 \section{Mathematical model} \label{Theory}
 \subsection{Numerical modelling methodology}
@@ -49,7 +49,7 @@ The time-averaged steady-state continuity, momentum, k-$\epsilon$ turbulence  an
 \begin{equation}\label{eqn_general}
 \underbrace{\frac{\partial}{\partial x_{i}}(\rho u_{i}\phi)}_{\text{Advection}}= \underbrace{\frac{\partial}{\partial x_{i}}(\Gamma_{\phi}\frac{\partial \phi}{\partial x_{i}})}_{\text{Diffusion}}+\underbrace{S_{\phi}}_{\text{Source}} 
 \end{equation}
-where $\rho$ is the gas density and $\Gamma_{\phi}$ is the diffusion coefficient for varaible $\phi$.\\
+where $\rho$ is the gas density and $\Gamma_{\phi}$ is the diffusion coefficient for variable $\phi$.\\
 
 In the present work the flue gas phase is modelled using the species-transport approach where a transport equation is solved for each constituent mass fraction in the gas mixture. The governing equations for the gas phase can be written as follows;\\
 
@@ -85,16 +85,16 @@ Species transport:
 \end{equation}
 where $k$ is the number of species present in the domain and $\vec{J_{k}}$ is the species diffusion flux. $\sum_r R_{j,k}$ is the net rate of production of species $j$ due to $r$ reactions.\\
 
-To correctly account for the particle inertial effects on the gas phase convection an effective density is defined as follows and used in the above equations
+To correctly account for the particle inertial effects on the gas phase convection an effective density is defined as follows and is used in the above equations.
 
 \begin{equation} \label{eff_rho}
 	\rho_{eff} = \frac{\rho \rho_p \left( \phi_{mp} + 1 \right)}{\rho \phi_{mp} + \rho_p}
 \end{equation}
 
 In equation \eqref{eff_rho}, $\rho_p$ is the particulate matter density and $\phi_{mp}$ $[kg_p/kg]$ is the local mass concentration of particulate matter present in the gas volume. 
-
+\\
 \subsubsection{Solid phase modelling}
-The pseudo particles transported into the domain are modelled using a scalar field and transported through the computational domain according to equation \ref{eqn_general}. The pseudo particle scalar fields are used to define the fuel characteristics based on the proximate analysis composition (refer to Table \ref{tab_fuel}), namely consisting of moisture, volatile matter, fixed  carbon and ash. Each of the scalar field equations solved for are given in Table \ref{tab_scalars}.\\
+The pseudo particles transported into the domain are modelled using a scalar field and transported through the computational domain according to equation \eqref{eqn_general}. The pseudo particle scalar fields are used to define the fuel characteristics based on the proximate analysis composition (refer to Table \ref{tab_fuel}), namely consisting of moisture, volatile matter, fixed  carbon and ash. Each of the scalar field equations solved for are given in Table \ref{tab_scalars}.\\
 
 \begin{table}[h!]
 \centering
@@ -222,7 +222,7 @@ Higher Heating Value - (HHV) & 15070 \\
 \end{tabular}
 \end{table}
 
-The plant in designed to operate at a 100\% MCR with a excess air ratio of 15.5\%. As the plant is turned down from 100\% MCR the excess air ratio is increased to ensure sufficient air and fuel mixing occurs. At MCR ratings of 81\% and 60\% the excess ratios were calculated as 20.9\% and 26.3\% respectively, based on the design schedules. The inlet mass flow rates and temperatures for the plant's MCR ratings of 100\%, 81\% and 60\% are listed in Table \ref{tab_inlets}.
+The plant in designed to operate at a 100\% MCR with a excess air ratio of 15.5\%. As the plant is turned down from 100\% MCR the excess air ratio is increased to ensure sufficient air and fuel mixing occurs. At MCR ratings of 81\% and 60\% the excess ratios were calculated as 20.9\% and 26.3\% respectively, based on the design schedule data. The inlet mass flow rates and temperatures for the plant's MCR ratings of 100\%, 81\% and 60\% are listed in Table \ref{tab_inlets}.
 \begin{table}[h!]
 \centering
 \caption{Inlet conditions for simulated load cases (per burner)}\label{tab_inlets}       
@@ -233,8 +233,8 @@ Load Rating & 100 \% & 80 \% & 60 \% & Unit  \\
 PA flow rate & 4.75 & 4.01 & 2.81 & $kg/s$   \\
 SA flow rate & 14.27 & 12.04 & 8.43 & $kg/s$ \\
 Fuel flow rate & 3.12 & 2.52 & 1.67 & $kg/s$ \\
-PA inlet temperature & 373 & 373 & 373 & $K$ \\
-SA inlet temperature & 577 &558 & 535 & $K$  \\
+PA inlet temperature & 373.15 & 373.15 & 373.15 & $K$ \\
+SA inlet temperature & 577.15 &558.15 & 535.15 & $K$  \\
 \hline
 \end{tabular}
 \end{table}\\
@@ -278,7 +278,7 @@ The graphs shown in figure \ref{fig_heat_load} illustrate the calculated (based 
 \label{fig_heat_load}
 \end{figure}
 
-The general accuracy of the EE model is seen to be able to sufficiently capture the overall heat loads when compared to the measured and experimental results. A notable difference is seen in the 60\% load case of figure \ref{fig_heat_load} (c), where both the EL and EE numerical models under-predict the platens heat load. Figure \ref{fig_velocity} compares the gas velocity fields for the EL and EE model. It can be seen that results are in good agreement. The EE model tends to under predict the lower burner velocity transport resulting in combustion occurring closer to the burner mouth and lower furnace walls. This effect is seen in both the temperature contour plots of figure \ref{fig_temp} (d-f) and wall heat flux contours of figure \ref{fig_wall_heat} (d-f).
+The general accuracy of the EE model is seen to be able to sufficiently capture the overall heat loads when compared to the calculated and EL model results. A notable difference is seen in the 60\% load case of figure \ref{fig_heat_load} (c), where both the EL and EE numerical models under-predict the platens heat load. Figure \ref{fig_velocity} compares the gas velocity fields for the EL and EE model. It can be seen that results are in good agreement. The EE model tends to under predict the lower burner velocity transport resulting in combustion occurring closer to the burner mouth and lower furnace walls. This effect is seen in both the temperature contour plots of figure \ref{fig_temp} (d-f) and wall heat flux contours of figure \ref{fig_wall_heat} (d-f).
 \begin{figure}[h!]
 \centering
 \includegraphics[scale = 0.3]{velo}
