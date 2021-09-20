@@ -60,7 +60,7 @@ Mass conservation:
 Momentum conservation:
 \\
 \begin{equation}\label{eqn_momentum}
-\frac{\partial}{\partial x_{i}}(\rho u_{i}u_{j})+\frac{\partial \overline{P}}{\partial x_{j}}=\frac{\partial}{\partial x_{i}}\left[\mu\left\{\frac{\partial u_{j}}{\partial x_{i}}+\frac{\partial u_{i}}{\partial x_{j}}-\frac{2}{3}\delta_{ij}\frac{\partial u_{i}}{\partial x_{i}}\right\}\right]+\frac{\partial}{\partial x_{i}}(-\rho\overline{u_{i}^{'}u_{j}^{'}})+S_m
+\frac{\partial}{\partial x_{i}}(\rho_{eff} u_{i}u_{j})+\frac{\partial \overline{P}}{\partial x_{j}}=\frac{\partial}{\partial x_{i}}\left[\mu\left\{\frac{\partial u_{j}}{\partial x_{i}}+\frac{\partial u_{i}}{\partial x_{j}}-\frac{2}{3}\delta_{ij}\frac{\partial u_{i}}{\partial x_{i}}\right\}\right]+\frac{\partial}{\partial x_{i}}(-\rho\overline{u_{i}^{'}u_{j}^{'}})+S_m
 \end{equation}\\
 
 The momentum equation is closed by approximating the Reynolds stresses using the Boussinesq relationship as shown in equation \eqref{eqn_bouss}.
@@ -94,7 +94,7 @@ To correctly account for the particle inertial effects on the gas phase convecti
 In equation \eqref{eff_rho}, $\rho_p$ is the particulate matter density and $\phi_{mp}$ $[kg_p/kg]$ is the local mass concentration of particulate matter present in the gas volume. 
 
 \subsubsection{Solid phase modelling}
-The pseudo particles transported into the domain are modelled using a scalar field and transported through the computational domain according equation \ref{eqn_general}. The pseudo particle scalar fields are used to define the fuel characteristics based on the proximate analysis composition (refer to Table \ref{tab_fuel}), namely consisting of moisture, volatile matter, fixed  carbon and ash. Each of the scalar field equations solved for are given in Table \ref{tab_scalars}.\\
+The pseudo particles transported into the domain are modelled using a scalar field and transported through the computational domain according to equation \ref{eqn_general}. The pseudo particle scalar fields are used to define the fuel characteristics based on the proximate analysis composition (refer to Table \ref{tab_fuel}), namely consisting of moisture, volatile matter, fixed  carbon and ash. Each of the scalar field equations solved for are given in Table \ref{tab_scalars}.\\
 
 \begin{table}[h!]
 \centering
